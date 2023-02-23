@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../constants/CounterConstants";
+import { INCREMENT, DECREMENT, RESET } from "../constants/CounterConstants";
 
 export const increment = () => async (dispatch) => {
   dispatch({
@@ -9,5 +9,11 @@ export const increment = () => async (dispatch) => {
 export const decrement = () => async (dispatch) => {
   dispatch({
     type: DECREMENT,
+  });
+};
+
+export const reset = () => async (dispatch) => {
+  dispatch({
+    type: RESET,
   });
 };

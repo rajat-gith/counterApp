@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../constants/CounterConstants";
+import { INCREMENT, DECREMENT, RESET } from "../constants/CounterConstants";
 
 const initialState = {
   count: 0,
@@ -15,6 +15,11 @@ export const incrementCount = (state = initialState, action) => {
       return {
         ...state,
         count: state.count - 1,
+      };
+    case RESET:
+      return {
+        ...state,
+        count: 0,
       };
     default:
       return state;
